@@ -1,3 +1,3 @@
-const collectionMap = (doc) => doc.data();
+const snapshotToJson = (doc) => ({ id: doc.id, ...doc.data() });
 
-module.exports = collectionMap;
+module.exports = snapshotToJson;

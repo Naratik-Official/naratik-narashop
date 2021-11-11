@@ -6,8 +6,8 @@ const HelloServices = require('./services/HelloService');
 const init = async () => {
   const helloServices = new HelloServices();
   const server = Hapi.server({
-    port: '8080',
-    host: 'localhost',
+    port: process.env.PORT || '8080',
+    host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
     routes: {
       cors: {
         origin: ['*'],

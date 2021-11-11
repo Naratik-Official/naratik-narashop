@@ -1,0 +1,15 @@
+@hostname = localhost
+@port = 8080
+@host = http://{{hostname}}:{{port}}
+@contentType = application/json
+@name = test-{{$datetime rfc1123}}
+###
+GET {{host}}
+
+###
+POST {{host}}
+Content-Type: {{contentType}}
+
+{
+  "nama" : "{{name}}"
+}
