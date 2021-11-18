@@ -43,3 +43,18 @@ key: 6ae68337bdf2665a1bbe634e71d34857
   "courier": "jne"
 
 }
+
+###
+POST {{host}}/batik
+Content-Type: {{contentType}}
+
+{
+    "batikName": "test",
+    "location": "Semarang",
+    "image": "https://dummy.com",
+    "mainCategory": ["cat1","cat2"],
+    "sortCategory": ["kain"]
+}
+
+###
+GET {{host}}/batik

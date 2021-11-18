@@ -4,6 +4,11 @@ const routes = (handler) => [
     path: '/batik',
     handler: handler.getBatikHandler,
   },
+  {
+    method: 'POST',
+    path: '/batik',
+    handler: handler.postBatikHandler,
+  },
 ];
 
 module.exports = routes;

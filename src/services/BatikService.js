@@ -1,4 +1,4 @@
-const { db } = require('../config/db');
+const { db, fs } = require('../config/db');
 const snapshotToJson = require('../utils/utils');
 
 class BatikServices {
@@ -13,6 +13,29 @@ class BatikServices {
       .get();
 
     return result.docs.map(snapshotToJson);
+  }
+
+  async addBatik({
+    batikName,
+    location,
+    image,
+    mainCategory,
+    sortCategory,
+  }) {
+    const data = {
+      batikName,
+      location,
+      image,
+      mainCategory,
+      sortCategory,
+      createdAt: fs.firestore.FieldValue.serverTimestamp(),
+    };
+    const result = await this
+      .batikDb
+      .add(
+        data,
+      );
+    return result.id;
   }
 }
 

@@ -17,7 +17,7 @@ class BatikHandler {
 
   async postBatikHandler(request, h) {
     try {
-      const result = await this.service.addBatik();
+      const result = await this.service.addBatik(request.payload);
       return h.response(result).code(201);
     } catch (error) {
       return error;
