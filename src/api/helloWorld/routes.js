@@ -7,7 +7,12 @@ const routes = (handler) => [
   {
     method: 'POST',
     path: '/',
-    handler: handler.ping,
+    handler: handler.toko,
+  },
+  {
+    method: 'POST',
+    path: '/{id}',
+    handler: handler.stok,
   },
 ];
 

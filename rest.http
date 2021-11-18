@@ -13,3 +13,33 @@ Content-Type: {{contentType}}
 {
   "nama" : "{{name}}"
 }
+
+###
+POST {{host}}/8KIatQbszNxK5u1PKGFN
+Content-Type: {{contentType}}
+
+{
+  "barang" : "sutra",
+  "stok" : 20
+}
+
+###
+POST {{host}}
+Content-Type: {{contentType}}
+
+{
+  "nama": "Toko Batik Bu Atik"
+}
+
+###
+POST https://api.rajaongkir.com/starter/cost
+Content-Type: {{contentType}}
+key: 6ae68337bdf2665a1bbe634e71d34857
+
+{
+  "origin": 501,
+  "destination": 241,
+  "weight": 1400,
+  "courier": "jne"
+
+}

@@ -6,4 +6,4 @@ fs.initializeApp({
 });
 const db = fs.firestore();
 
-module.exports = { db };
+module.exports = { fs, db };
